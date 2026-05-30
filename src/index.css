@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-creme: #FDF6E;
+  --color-primary: #ea580c;
+  --color-primary-hover: #c2410c;
+}
+
+body {
+  background-color: var(--color-creme);
+  background-image: linear-gradient(to right,rgba(0,0,0,0.03)1px,transparent 1px),linear-gradient(to bottom,rgba(0,0,0,0.03)1px,transparent 1px);
+  background-size: 40px 40px;
+  color: #111827;
+  margin: 0;
+  font-family: ui-sans-serif,system-ui,sans-serif;
+}
+
+::-webkit-scrollbar{ 
+  display:none; 
+}
