@@ -4,14 +4,17 @@ import{Clock,Trash2,Users}from'lucide-react';
 
 const API_BASE_URL=import.meta.env.VITE_API_BASE_URL||'http://localhost:8000';
 
-export default function HistoryView({onOpenJob,onDeleted,showDialog}){
+export default function HistoryView({onOpenJob,onDeleted,showDialog,sessionId}){
  const[jobs,setJobs]=useState([]);
  const[loading,setLoading]=useState(true);
 
  const loadJobs=useCallback(async()=>{
   setLoading(true);
   try{
-   const jobsRes=await fetch(`${API_BASE_URL}/api/jobs`);
+   const url=sessionId
+    ?`${API_BASE_URL}/api/jobs?session_id=${sessionId}`
+    :`${API_BASE_URL}/api/jobs`;
+   const jobsRes=await fetch(url);
    if(!jobsRes.ok)throw new Error('Could not load history.');
    const jobsData=await jobsRes.json();
 
@@ -33,7 +36,7 @@ export default function HistoryView({onOpenJob,onDeleted,showDialog}){
   }finally{
    setLoading(false);
   }
- },[showDialog]);
+ },[showDialog,sessionId]);
 
  useEffect(()=>{
   const timer=setTimeout(()=>{loadJobs();},0);
