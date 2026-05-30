@@ -11,7 +11,7 @@ export default function UploadView({ onAnalyze }) {
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="max-w-4xl mx-auto bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
       <div className="mb-8 text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Upload Resume</h2>
+        <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Upload Resumes</h2>
       </div>
       <div className="mb-6">
         <label className="text-sm font-semibold text-gray-700 mb-2 block tracking-wide">
@@ -38,7 +38,7 @@ export default function UploadView({ onAnalyze }) {
           <div className="flex-grow w-full border-2 border-dashed border-gray-300 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors flex flex-col items-center justify-center p-8 relative cursor-pointer group min-h-[280px]">
             <input type="file" multiple accept=".pdf,.docx" onChange={(e) => setFiles(e.target.files)} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
            
-            <p className="text-sm font-medium text-gray-700">{files.length > 0 ? `${files.length} selected` : "Upload Resume"}</p>
+            <p className="text-sm font-medium text-gray-700">{files.length > 0 ? `${files.length} selected` : "Upload Resumes"}</p>
           </div>
         </div>
       </div>
