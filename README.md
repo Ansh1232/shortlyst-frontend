@@ -1,4 +1,4 @@
-# Shortlyst - AI-Powered ATS & Resume Screener
+# Shortlyst
 
 **Notice to Evaluator:** This project utilizes a decoupled client-server architecture for deployment optimization. 
 
