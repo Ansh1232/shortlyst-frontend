@@ -4,10 +4,10 @@
 
 ## 1. Project Links
 * **Live Application URL:** https://shortlyst.netlify.app/
-* **Frontend Repository (You are here):** https://github.com/Ansh1232/shortlyst-frontend
+* **Frontend Repository (Current Repository):** https://github.com/Ansh1232/shortlyst-frontend
 * **Backend Repository:** https://github.com/Ansh1232/shortlyst
 
-**Deployment Note:** The backend API is hosted on a free Render tier (https://shortlyst-api.onrender.com). If the initial resume analysis experiences a slight delay, the server is waking up from a cold start. Subsequent requests will process instantly.
+**Deployment Note:** The backend API is hosted on Render (https://shortlyst-api.onrender.com). If the initial resume analysis experiences a slight delay, the server is waking up from a cold start.Subsequent requests will process instantly.
 
 ---
 
@@ -45,8 +45,8 @@
 
 ### Architecture Overview
 The application follows a modern decoupled architecture to ensure scalability and separation of concerns:
-* **Frontend:** A Single Page Application (SPA) built with React.js, Vite, and TailwindCSS. Hosted on Netlify.
-* **Backend:** A RESTful API built with Python and FastAPI, handling asynchronous file uploads, data parsing, and AI model communication. Hosted on Render.
+* **Frontend:** A Single Page Application built with React.js, and TailwindCSS. It is hosted on Netlify.
+* **Backend:** A RESTful API built with Python and FastAPI, handling asynchronous file uploads, data parsing, and AI model communication. It is hosted on Render.
 * **Database:** A cloud-hosted relational MySQL database managed via Aiven. It securely stores job descriptions, candidate metadata, parsed skills, and historical screening sessions.
 * **AI Engine:** Integration with Google Generative AI (Gemini) for natural language processing, semantic extraction, and contextual scoring of unstructured resume data.
 
